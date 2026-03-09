@@ -17,36 +17,6 @@ The dataset is stored in HDFS and processed using Apache Spark to generate insig
 - Channels with highest views
 - Category statistics
 - Trending videos
-  
-## System Architecture
-
-+-----------------------+
-|  YouTube Dataset CSV  |
-+----------+------------+
-           |
-           v
-+-----------------------+
-|   HDFS (Hadoop)       |
-|   Distributed Storage |
-+----------+------------+
-           |
-           v
-+-----------------------+
-|   PySpark Processing  |
-|   Data Analysis       |
-+----------+------------+
-           |
-           v
-+-----------------------+
-|  Processed Results    |
-|  (CSV Files)          |
-+----------+------------+
-           |
-           v
-+-----------------------+
-|  Streamlit Dashboard  |
-|  Data Visualization   |
-+-----------------------+
 
 ## Cluster Setup
 
