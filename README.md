@@ -17,6 +17,51 @@ The dataset is stored in HDFS and processed using Apache Spark to generate insig
 - Channels with highest views
 - Category statistics
 - Trending videos
+  
+## System Architecture
+
++-----------------------+
+|  YouTube Dataset CSV  |
++----------+------------+
+           |
+           v
++-----------------------+
+|   HDFS (Hadoop)       |
+|   Distributed Storage |
++----------+------------+
+           |
+           v
++-----------------------+
+|   PySpark Processing  |
+|   Data Analysis       |
++----------+------------+
+           |
+           v
++-----------------------+
+|  Processed Results    |
+|  (CSV Files)          |
++----------+------------+
+           |
+           v
++-----------------------+
+|  Streamlit Dashboard  |
+|  Data Visualization   |
++-----------------------+
+
+## Cluster Setup
+
+The Hadoop cluster was configured using a master–worker architecture.
+
+- **Master Node**: Responsible for running NameNode and ResourceManager.
+- **Worker Node(s)**: Responsible for running DataNode and NodeManager services.
+
+The cluster was deployed using Virtual Machines where one VM acts as the master node and another VM acts as the worker node.
+
+Services running in the cluster include:
+- NameNode
+- DataNode
+- ResourceManager
+- NodeManager
 
 ## Dashboard
 A Streamlit dashboard is used to visualize the analytics results.
